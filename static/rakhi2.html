@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SCS Personalized Rakhi Generator</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:20px;
+    text-align:center;
+    font-family:Arial,sans-serif;
+    background:#fef3c7;
+}
+
+h1{
+    color:#b91c1c;
+}
+
+input[type="text"]{
+    width:300px;
+    padding:12px;
+    font-size:18px;
+    border-radius:5px;
+}
+
+input[type="file"]{
+    margin-top:10px;
+}
+
+button{
+    padding:12px 25px;
+    margin:10px;
+    background:#f97316;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+button:hover{
+    background:#ea580c;
+}
+
+#rakhiContainer{
+    margin-top:20px;
+}
+
+svg{
+    background:white;
+    border-radius:20px;
+    box-shadow:0px 0px 20px rgba(0,0,0,0.15);
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>SCS - Raksha Bandhan Celebration</h1>
+<h2>🌸 Personalized Rakhi Generator 🌸</h2>
+
+<input
+type="text"
+id="txtName"
+placeholder="Enter Brother Name">
+
+<br><br>
+
+<input
+type="file"
+id="brotherImage"
+accept="image/*">
+
+<span>Upload Brother Photo</span>
+
+<br><br>
+
+<button onclick="generateRakhi()">
+Generate Rakhi
+</button>
+
+<button onclick="downloadSVG()">
+Download Rakhi
+</button>
+
+<div id="rakhiContainer">
+
+<svg id="rakhi" width="900" height="450">
+
+    <!-- LEFT DECORATIVE LACE -->
+
+    <line x1="0" y1="225" x2="270" y2="225"
+          stroke="#b71c1c" stroke-width="12"/>
+
+    <line x1="0" y1="215" x2="270" y2="215"
+          stroke="gold" stroke-width="3"/>
+
+    <line x1="0" y1="235" x2="270" y2="235"
+          stroke="gold" stroke-width="3"/>
+
+    <!-- RIGHT DECORATIVE LACE -->
+
+    <line x1="630" y1="225" x2="900" y2="225"
+          stroke="#b71c1c" stroke-width="12"/>
+
+    <line x1="630" y1="215" x2="900" y2="215"
+          stroke="gold" stroke-width="3"/>
+
+    <line x1="630" y1="235" x2="900" y2="235"
+          stroke="gold" stroke-width="3"/>
+
+    <!-- LEFT GONDE -->
+
+    <line x1="70" y1="225" x2="70" y2="300"
+          stroke="gold" stroke-width="3"/>
+
+    <circle cx="70" cy="315"
+            r="16"
+            fill="orange"/>
+
+    <circle cx="70" cy="345"
+            r="12"
+            fill="red"/>
+
+    <line x1="120" y1="225" x2="120" y2="120"
+          stroke="gold"
+          stroke-width="3"/>
+
+    <circle cx="120" cy="105"
+            r="16"
+            fill="purple"/>
+
+    <!-- RIGHT GONDE -->
+
+    <line x1="830" y1="225" x2="830" y2="300"
+          stroke="gold"
+          stroke-width="3"/>
+
+    <circle cx="830" cy="315"
+            r="16"
+            fill="orange"/>
+
+    <circle cx="830" cy="345"
+            r="12"
+            fill="red"/>
+
+    <line x1="780" y1="225" x2="780" y2="120"
+          stroke="gold"
+          stroke-width="3"/>
+
+    <circle cx="780" cy="105"
+            r="16"
+            fill="purple"/>
+
+    <!-- FLOWER PETALS -->
+
+    <ellipse cx="450" cy="90"
+             rx="45"
+             ry="80"
+             fill="#ff4081"/>
+
+    <ellipse cx="450" cy="360"
+             rx="45"
+             ry="80"
+             fill="#ff4081"/>
+
+    <ellipse cx="315" cy="225"
+             rx="80"
+             ry="45"
+             fill="#ff4081"/>
+
+    <ellipse cx="585" cy="225"
+             rx="80"
+             ry="45"
+             fill="#ff4081"/>
+
+    <ellipse cx="355" cy="130"
+             rx="50"
+             ry="35"
+             fill="#ec407a"/>
+
+    <ellipse cx="545" cy="130"
+             rx="50"
+             ry="35"
+             fill="#ec407a"/>
+
+    <ellipse cx="355" cy="320"
+             rx="50"
+             ry="35"
+             fill="#ec407a"/>
+
+    <ellipse cx="545" cy="320"
+             rx="50"
+             ry="35"
+             fill="#ec407a"/>
+
+    <!-- OUTER GOLD RING -->
+
+    <circle cx="450"
+            cy="225"
+            r="145"
+            fill="#ffc107"/>
+
+    <circle cx="450"
+            cy="225"
+            r="130"
+            fill="gold"
+            stroke="#ff6f00"
+            stroke-width="8"/>
+
+    <!-- INNER RING -->
+
+    <circle cx="450"
+            cy="225"
+            r="110"
+            fill="#ffe082"
+            stroke="#ffca28"
+            stroke-width="5"/>
+
+    <!-- PEARLS -->
+
+    <circle cx="450" cy="90" r="8" fill="white"/>
+    <circle cx="510" cy="106" r="8" fill="white"/>
+    <circle cx="560" cy="150" r="8" fill="white"/>
+    <circle cx="585" cy="225" r="8" fill="white"/>
+    <circle cx="560" cy="298" r="8" fill="white"/>
+    <circle cx="510" cy="340" r="8" fill="white"/>
+    <circle cx="450" cy="360" r="8" fill="white"/>
+
+    <circle cx="390" cy="340" r="8" fill="white"/>
+    <circle cx="340" cy="298" r="8" fill="white"/>
+    <circle cx="315" cy="225" r="8" fill="white"/>
+    <circle cx="340" cy="150" r="8" fill="white"/>
+    <circle cx="390" cy="106" r="8" fill="white"/>
+
+    <!-- NAME -->
+
+    <text id="rakhiName"
+          x="450"
+          y="185"
+          text-anchor="middle"
+          font-size="34"
+          fill="#c2185b"
+          font-weight="bold">
+          Your Name
+    </text>
+
+    <!-- HEART PHOTO AREA -->
+
+    <defs>
+        <clipPath id="heartClip">
+
+            <path d="
+            M450 220
+            C420 180 360 180 360 245
+            C360 300 450 365 450 365
+            C450 365 540 300 540 245
+            C540 180 480 180 450 220
+            "/>
+
+        </clipPath>
+    </defs>
+
+    <!-- PHOTO -->
+
+    <image id="brotherPhoto"
+           x="360"
+           y="180"
+           width="180"
+           height="190"
+           preserveAspectRatio="xMidYMid slice"
+           clip-path="url(#heartClip)">
+    </image>
+
+    <!-- HEART BORDER -->
+
+    <path
+        d="
+        M450 220
+        C420 180 360 180 360 245
+        C360 300 450 365 450 365
+        C450 365 540 300 540 245
+        C540 180 480 180 450 220
+        "
+        fill="none"
+        stroke="red"
+        stroke-width="6"/>
+
+    <!-- CENTER STONE -->
+
+    <circle cx="450"
+            cy="225"
+            r="18"
+            fill="#2196f3"/>
+
+</svg>
+</div>
+
+<script>
+
+document.getElementById("brotherImage")
+.addEventListener("change", function(e)
+{
+    const file = e.target.files[0];
+
+    if(!file)
+    {
+        return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = function(event)
+    {
+        const photo =
+        document.getElementById("brotherPhoto");
+
+        photo.setAttribute(
+            "href",
+            event.target.result
+        );
+
+        photo.setAttributeNS(
+            "http://www.w3.org/1999/xlink",
+            "xlink:href",
+            event.target.result
+        );
+    };
+
+    reader.readAsDataURL(file);
+});
+
+
+
+document
+.getElementById("brotherImage")
+.addEventListener("change",function(e){
+
+    let file=e.target.files[0];
+
+    if(!file)
+    {
+        return;
+    }
+
+    let reader=new FileReader();
+
+    reader.onload=function(event)
+    {
+        document
+        .getElementById("brotherPhoto")
+        .setAttribute(
+            "href",
+            event.target.result
+        );
+    };
+
+    reader.readAsDataURL(file);
+
+});
+
+function generateRakhi()
+{
+    let name =
+    document
+    .getElementById("txtName")
+    .value
+    .trim();
+
+    if(name==="")
+    {
+        alert("Please Enter Name");
+        return;
+    }
+
+    document
+    .getElementById("rakhiName")
+    .textContent=name;
+}
+
+
+function downloadSVG()
+{
+    const svg =
+    document.getElementById("rakhi");
+
+    const serializer =
+    new XMLSerializer();
+
+    const svgString =
+    serializer.serializeToString(svg);
+
+    const svgBlob =
+    new Blob(
+        [svgString],
+        {
+            type:"image/svg+xml;charset=utf-8"
+        }
+    );
+
+    const url =
+    URL.createObjectURL(svgBlob);
+
+    const img =
+    new Image();
+
+    img.onload = function()
+    {
+        const padding = 80;
+
+        const scale = 2;
+
+        const canvas =
+        document.createElement("canvas");
+
+        canvas.width =
+        (img.width + (padding * 2))
+        * scale;
+
+        canvas.height =
+        (img.height + (padding * 2))
+        * scale;
+
+        const ctx =
+        canvas.getContext("2d");
+
+        ctx.scale(
+            scale,
+            scale
+        );
+
+        ctx.fillStyle =
+        "#ffffff";
+
+        ctx.fillRect(
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        );
+
+        ctx.drawImage(
+            img,
+            padding,
+            padding
+        );
+
+        const pngFile =
+        canvas.toDataURL(
+            "image/png"
+        );
+
+        const link =
+        document.createElement("a");
+
+        let name =
+        document
+        .getElementById("txtName")
+        .value
+        .trim();
+
+        if(name === "")
+        {
+            name = "Rakhi";
+        }
+
+        link.download =
+        name +
+        "_Rakhi.png";
+
+        link.href =
+        pngFile;
+
+        document.body.appendChild(
+            link
+        );
+
+        link.click();
+
+        document.body.removeChild(
+            link
+        );
+
+        URL.revokeObjectURL(url);
+    };
+
+    img.src = url;
+}
+
+
+</script>
+
+</body>
+</html>
